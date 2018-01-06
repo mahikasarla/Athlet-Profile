@@ -27,7 +27,7 @@ var app = express();
 
   //Routing
   app.get('/', function(req, res){
-  res.render('/views/index.html');
+  res.render('views/index.html');
   });
   app.use('/api', athlet);
 
