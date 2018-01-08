@@ -1,0 +1,74 @@
+<html lang = "en-US" ng-app="athleteProfile">
+<head>
+    <meta charset = "UTF-8">
+     <title>opensponership</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel = "stylesheet" type = "text/css"  href = "./stylesheets/indexstyle.css" />
+    <script src="./js/index.js"></script>
+</head>
+<body ng-controller="basicInfo" >
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav" >
+                <li><a href="#">Home</a></li>
+                <li><a href="#" >About</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Events</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container" >
+    <h3 style="font-style: italic;" >Athlete Profile Page Questionnaire</h3>
+
+            <form class="form">
+                <h4 >Basic Info:</h4><br>
+                    Name:<br>
+                    <input type ="text" id="name" placeholder="Your Name" ng-model="basicInfo.name"/>
+                <br>
+                     Gender:<br>
+                     <label class="radio-inline"><input type="radio"  name="gender" ng-model="basicInfo.gender" value="male" checked/> Male</label>
+                     <label class="radio-inline"><input type="radio"  name="gender" ng-model="basicInfo.gender" value="female"/> Female</label>
+                     <label class="radio-inline"><input type="radio"  name="gender" ng-model="basicInfo.gender" value="other"/> Other</label>
+                <br>
+                     Date of Birth:<br>
+                     <input  type ="date" id="dateofbirth" placeholder="Date of birth" ng-model="basicInfo.dateofbirth"/>
+                <br>
+                     Nationality:<br>
+                     <input  type ="text id="nationality" placeholder="Nationality" ng-model="basicInfo.nationality"/>
+                <br>
+                      Married:<br>
+                      <label class="radio-inline"><input type="radio" id="married" value="yes" ng-model="basicInfo.married" checked/>Yes</label>
+                      <label class="radio-inline"><input type="radio" id="married" value="no" ng-model="basicInfo.married"/>No</label>
+                <br>
+                    Sport:<br>
+                      <select name="sports" multiple ng-model="basicInfo.sport" style= "color:black">
+                      <option value="Tennis">Tennis</option>
+                      <option value="Golf">Golf</option>
+                      <option value="Cricket">Cricket</option>
+                      <option value="Basketball">Basketball</option>
+                      <option value="Baseball">Baseball</option>
+                      <option value="Americanfootball">American Football</option>
+                      <option value="Badminton">Badminton</option>
+                      <option value="Beachvolleyball">Beach Volleyball</option>
+                    </select>
+                <br><br>
+                <button class="button" id="submitForm" type="submit"  ng-click="getAthlets()">Continue</button>
+            </form>
+</div>
+</body>
+</html>

@@ -4,15 +4,22 @@
   "description": "Athlet Input Form",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
   },
   "author": "mahi kasarla",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.2",
-    "cors": "^2.8.4",
+    "cookie-parser": "^1.4.3",
     "ejs": "^2.5.7",
     "express": "^4.16.2",
-    "mongojs": "^2.4.1"
+    "mongojs": "^2.4.1",
+    "morgan": "^1.9.0",
+    "serve-favicon": "^2.4.5",
+    "static-favicon": "^2.0.0-alpha"
+  },
+  "engines": {
+    "npm": "5.5.1",
+    "node": "9.3.0"
   }
 }

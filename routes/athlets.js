@@ -11,7 +11,7 @@ var db = mongojs('mongodb://mahi:mLab5@ds135757.mlab.com:35757/athlet',['athlet'
 router.get('/athlets', function(req, res, next){
     db.athlet.find(function(err, athlets){
         if(err){
-            res.send(err);
+            req.send(err);
         }
         res.json(athlets);
     });

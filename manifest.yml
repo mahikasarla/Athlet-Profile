@@ -1,0 +1,6 @@
+applications:
+- name: my-app
+  host: opensponsership-org
+  domain: cfapps.io
+  path: my-app.zip
+  buildpack: https://github.com/cloudfoundry/nodejs-buildpack

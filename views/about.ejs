@@ -1,0 +1,80 @@
+<html lang = "en-US" ng-app="athleteProfile">
+<head>
+    <meta charset = "UTF-8">
+    <title>opensponership</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+    <link rel = "stylesheet" type = "text/css"  href = "./stylesheets/indexstyle.css" />
+    <script src="./js/about.js"></script>
+</head>
+<body ng-controller="aboutController">
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <label class="icon-bar"></label>
+                <label class="icon-bar"></label>
+                <label class="icon-bar"></label>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav" >
+                <li><a href="#">Home</a></li>
+                <li><a href="#" >About</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Events</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><label class="glyphicon glyphicon-log-in"></label> Login</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container" class="text-center" >
+            <form class="form" >
+                    <h4>About:</h4><br>
+                    Team:<br>
+                    <input id="team" ng-model="aboutInfo.team" placeholder="Team"/>
+                    <br>
+                    Association<br>
+                    <input id="interests" ng-model="aboutInfo.association" placeholder="Association" />
+                    <br>
+                    Location<br>
+                    <input id="location" ng-model="aboutInfo.location" placeholder="Location"/>
+                    <br>
+                    Charities<br>
+                    <input id="charities" ng-model="aboutInfo.charities" placeholder="Charities"/>
+                    <br>
+                    Interests<br>
+                    <input id="interests" ng-model="aboutInfo.interests" placeholder="Interests" />
+                    <br>
+                    Alcohol<br>
+                    <input id="drinksalcohol" ng-model="aboutInfo.drinksalcohol" placeholder="Drinks Alcohol"/>
+                    <br>
+                    About<br>
+                    <textarea rows="4" cols="50" id="interests" ng-model="aboutInfo.about" placeholder="Tell me more about you!"></textarea>
+                    <br><br>
+                    <h4>Social Media:</h4>
+                    Facebook<br>
+                    <input type ="email" id="facebook" ng-model="aboutInfo.facebook" placeholder="Facebook"/>
+                    <br>
+                    Twitter<br>
+                    <input type ="email" id="twitter" ng-model="aboutInfo.twitter" placeholder="Twitter"/>
+                    <br>
+                    Instagram<br>
+                    <input type ="email" id="instagram" ng-model="aboutInfo.instagram" placeholder="Instagram"/>
+                    <br>
+                    Youtube<br>
+                    <input type ="email"id="youtube" ng-model="aboutInfo.youtube" placeholder="Youtube"/>
+                    <br>
+                    Snapchat<br>
+                    <input  type ="email" id="snapchat" ng-model="aboutInfo.snapchat" placeholder="Snapchat"/>
+                    <br><br>
+               <button class="button"  id="backToBasic" type="button" ng-click="goToBasic()">Back</button>
+               <button class="button" type="submit" ng-click="continueNext()" >Continue</button>
+        </form>
+</div>
+</body>
+</html>
