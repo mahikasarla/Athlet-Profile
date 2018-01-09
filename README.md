@@ -13,7 +13,7 @@ To Install node packages from package.json
  $ npm install
 
 To run the application from CMD
-  $node app.js
+  $npm start
 
  Access the deployed webapp at
      http://localhost:3000
